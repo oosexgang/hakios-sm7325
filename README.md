@@ -5,8 +5,8 @@ layer (`soc/`: the SC7280 family, SM7325). `tools/hakios-device.py sync` in the 
 
 ## Documentation
 
-- [Build and integrate](docs/building.md)
-- [Storage map](docs/storage.md)
+- [Build and integrate](DOCS/building.md)
+- [Storage map](DOCS/storage.md)
 
 ## The device
 

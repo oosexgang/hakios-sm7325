@@ -24,4 +24,4 @@ local files to the kernel's expected firmware input paths.
 
 ## Storage
 
-The read-only UFS survey and the existing Darwin partition are documented in `../docs/storage.md`.
+The read-only UFS survey and the existing Darwin partition are documented in `../DOCS/storage.md`.
