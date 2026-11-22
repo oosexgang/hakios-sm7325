@@ -1,8 +1,8 @@
 # Vendor firmware, extracted device data, and generated images stay local.
-/firmware/poco-x5-pro/*
-!/firmware/poco-x5-pro/README.md
-/uefi/files/Binaries/poco-x5-pro/*
-!/uefi/files/Binaries/poco-x5-pro/README.md
+/firmware/sm7325-device/*
+!/firmware/sm7325-device/README.md
+/uefi/files/Binaries/sm7325-device/*
+!/uefi/files/Binaries/sm7325-device/README.md
 /local-firmware/
 /local-build/
 /images/

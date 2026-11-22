@@ -2,7 +2,7 @@
 # Extract this phone's vendor firmware into the device repository's ignored local directory.
 set -euo pipefail
 HERE=$(cd "$(dirname "$0")" && pwd)
-FW="$HERE/firmware/poco-x5-pro"
+FW="$HERE/firmware/sm7325-device"
 
 pull() {
 	local category=$1; shift
@@ -22,4 +22,4 @@ pull haptic /vendor/firmware/aw8697_haptic.bin
 pull touch /vendor/firmware/focaltech_ts_fw_m20.bin
 pull bluetooth /vendor/bt_firmware/image/msbtfw10.tlv /vendor/bt_firmware/image/msbtfw11.mbn /vendor/bt_firmware/image/msbtfw11.tlv /vendor/bt_firmware/image/msbtfw11.ver /vendor/bt_firmware/image/msnv10.bin /vendor/bt_firmware/image/msnv11.bin
 pull modem /vendor/firmware_mnt/image/modem.mdt $(for i in $(seq -w 0 28); do echo "/vendor/firmware_mnt/image/modem.b$i"; done)
-echo "pull-firmware.sh: done; firmware is local under firmware/poco-x5-pro/ and excluded from Git"
+echo "pull-firmware.sh: done; firmware is local under firmware/sm7325-device/ and excluded from Git"

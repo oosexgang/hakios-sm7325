@@ -2,7 +2,7 @@
 set -euo pipefail
 
 HERE=$(cd "$(dirname "$0")/.." && pwd)
-DEVICE_FW="$HERE/firmware/poco-x5-pro"
+DEVICE_FW="$HERE/firmware/sm7325-device"
 KERNEL=${1:-}
 if [ -z "$KERNEL" ]; then
 	echo "usage: $0 /path/to/kernel-checkout" >&2
@@ -35,5 +35,5 @@ for pair in \
 	set -- $pair
 	link_dir "$DEVICE_FW/$1" "$KERNEL/userland/$2"
 done
-link_dir "$DEVICE_FW" "$KERNEL/firmware/poco-x5-pro"
+link_dir "$DEVICE_FW" "$KERNEL/firmware/sm7325-device"
 echo "Firmware links configured for $KERNEL"

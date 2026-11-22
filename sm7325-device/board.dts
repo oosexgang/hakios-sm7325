@@ -3,7 +3,7 @@
 // POCO X5 Pro 5G. Sources: the phone's Android device tree (Xiaomi's SM7325 display tree, the panel
 // dsi_m20_36_02_0a_dsc_vid) and what was measured on the phone under Darwin 16.5 (base/README.md).
 / {
-	name = "poco-x5-pro";                       // what the loader puts in /chosen/darwin-board
+	name = "sm7325-device";                       // what the loader puts in /chosen/darwin-board
 	description = "POCO X5 Pro 5G";
 	soc = "sm7325";
 

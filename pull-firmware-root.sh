@@ -2,7 +2,7 @@
 # Extract firmware through su when Android restricts direct adb reads; keep every blob local.
 set -euo pipefail
 HERE=$(cd "$(dirname "$0")" && pwd)
-FW="$HERE/firmware/poco-x5-pro"
+FW="$HERE/firmware/sm7325-device"
 S=/data/local/tmp/hakios-fw
 STAGE=$(mktemp -d "$HERE/.firmware-root.XXXXXX")
 trap 'rm -rf "$STAGE"; adb shell "su -c 'rm -rf $S'" >/dev/null 2>&1 || true' EXIT
