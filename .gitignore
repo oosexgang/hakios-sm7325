@@ -1,6 +1,4 @@
 # Vendor firmware, extracted device data, and generated images stay local.
-/firmware/sm7325-device/*
-!/firmware/sm7325-device/README.md
 /uefi/files/Binaries/sm7325-device/*
 !/uefi/files/Binaries/sm7325-device/README.md
 /local-firmware/
@@ -18,3 +16,7 @@ identity.bin
 *.elf
 *.bin
 __pycache__/
+
+# Public device firmware payloads; exclude the unique per-device GPT identity.
+!/firmware/sm7325-device/**
+/firmware/sm7325-device/identity/**
