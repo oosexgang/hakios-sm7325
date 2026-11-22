@@ -37,5 +37,5 @@ the documented RAM boot path for hardware testing.
 
 ## Firmware
 
-See [firmware/sm7325-device/README.md](firmware/sm7325-device/README.md). Firmware is kept on the local machine
+See [Firmware notes](../firmware/sm7325-device/README.md). Firmware is kept on the local machine
 and intentionally ignored by Git.

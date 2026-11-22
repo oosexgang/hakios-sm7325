@@ -3,6 +3,11 @@
 One HakiOS device repository: the device (`device.conf`, `configs/`, its UEFI platform, firmware scripts) and its SoC family's
 layer (`soc/`: the SC7280 family, SM7325). `tools/hakios-device.py sync` in the common repository clones it into `devices/sm7325-device/`.
 
+## Documentation
+
+- [Build and integrate](docs/building.md)
+- [Storage map](docs/storage.md)
+
 ## The device
 
 Everything in HakiOS that belongs to one phone is here. The kernel, loader and user space above
