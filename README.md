@@ -1,7 +1,7 @@
-# hakios-sm7325: the POCO X5 Pro 5G (redwood) and its Snapdragon 778G (SM7325)
+# hakios-sm7325: POCO X5 Pro 5G and Snapdragon 778G (SM7325)
 
 One HakiOS device repository: the device (`device.conf`, `configs/`, its UEFI platform, firmware scripts) and its SoC family's
-layer (`soc/`: the SC7280 family, SM7325). `tools/hakios-device.py sync` in the common repository clones it into `devices/redwood/`.
+layer (`soc/`: the SC7280 family, SM7325). `tools/hakios-device.py sync` in the common repository clones it into `devices/poco-x5-pro/`.
 
 ## The device
 
@@ -13,8 +13,8 @@ tree and its Android. A port to another Qualcomm phone is another directory like
 |---|---|
 | SoC | Qualcomm Snapdragon 778G (SM7325, "yupik" in the device tree) |
 | UEFI for the phone | `uefi/`: a port of Mu-Silicium (a patch and files; `apply.sh` clones and applies, `export.sh` saves) |
-| Prebuilt UEFI images | `prebuilt/`: `SILICIUM_UEFI.fd`, `BootShim.bin`, the device tree `device-tree.dtb` (the phone's Android kernel's), `ramdisk`, `mkbootimg.py` |
-| The phone's firmware | **not in the repository**: `pull-firmware.sh` pulls it off your phone over `adb` into `fw-*/` at the top |
+| Board description for the current kernel | `poco-x5-pro/board.dts` and `poco-x5-pro/soc.dtsi` |
+| UEFI build inputs and local firmware | Generated/extracted files live in `firmware/poco-x5-pro/`, ignored by Git |
 | Tools | `tools/modem_firmware.py` (the modem image by the device tree), `tools/cellular_probe.py` (the modem's nodes in the device tree) |
 
 What the kernel does for this phone in particular is the drivers `drivers/*/hakios.*`
@@ -25,12 +25,12 @@ what to rewrite for another phone.
 ## Firmware
 
 ```sh
-devices/redwood/pull-firmware.sh      # the phone in Android, on adb
+./pull-firmware.sh      # phone in Android, connected with adb
 ```
 
-Pulls the GPU (`fw-gpu/`), Wi-Fi (`fw-wifi/`), the audio DSP (`fw-audio/`, battery and charging
-come through it), the vibration motor (`fw-haptic/`), the modem (`fw-modem/`, with `image/` for its
-TFTP) and the cameras (`fw-camera/`). All of it is the vendor's and stays out of git.
+Pulls GPU, Wi-Fi, audio DSP, haptic, touch, Bluetooth, and modem files into categories under
+`firmware/poco-x5-pro/`. The files stay on the developer machine and are excluded from commits.
+Run `scripts/link-firmware.sh /path/to/kernel` to connect kernel build inputs.
 
 ## Running
 
@@ -83,3 +83,11 @@ Still hardcoded (IPA-version specific, not per-phone within one IPA version): th
 layout and the SMEM filter-table item (`ipa_4_11_mem_part`), and the Qtime/resource-group values
 the IPA is programmed with. A phone on the same IPA (4.11) needs none of these changed; a different
 IPA version is a larger port.
+
+
+## Board description for the current kernel
+
+`poco-x5-pro/board.dts` and `poco-x5-pro/soc.dtsi` describe the phone for the newer board-table
+build. Point `HAKIOS_DEVICES` at this repository and run `tools/boards.py status poco-x5-pro` from
+the kernel checkout. The loader and kernel use the product name `poco-x5-pro`; Android fastboot
+continues to report Xiaomi's product identifier `redwood`.

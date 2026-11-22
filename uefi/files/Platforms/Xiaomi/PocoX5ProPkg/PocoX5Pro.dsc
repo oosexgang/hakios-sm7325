@@ -14,15 +14,15 @@
 #
 ################################################################################
 [Defines]
-  PLATFORM_NAME                  = redwood
+  PLATFORM_NAME                  = poco-x5-pro
   PLATFORM_GUID                  = 62B40F33-4011-4ACB-8348-1A6BB928C8A6
   PLATFORM_VERSION               = 0.1
   DSC_SPECIFICATION              = 0x00010005
-  OUTPUT_DIRECTORY               = Build/redwoodPkg
+  OUTPUT_DIRECTORY               = Build/PocoX5ProPkg
   SUPPORTED_ARCHITECTURES        = AARCH64
   BUILD_TARGETS                  = RELEASE|DEBUG
   SKUID_IDENTIFIER               = DEFAULT
-  FLASH_DEFINITION               = redwoodPkg/redwood.fdf
+  FLASH_DEFINITION               = PocoX5ProPkg/PocoX5Pro.fdf
   USE_CUSTOM_DISPLAY_DRIVER      = 0
 
   #
@@ -51,8 +51,8 @@
   #
   gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemManufacturer|"Xiaomi"
   gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemModel|"POCO X5 Pro 5G"
-  gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemRetailModel|"redwood"
-  gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemRetailSku|"POCO_X5_Pro_5G_redwood"
+  gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemRetailModel|"POCO X5 Pro 5G"
+  gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemRetailSku|"POCO_X5_Pro_5G"
   gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemBoardModel|"POCO X5 Pro 5G"
 
   #
@@ -76,12 +76,12 @@
   #
   # Memory Libraries
   #
-  MemoryMapLib|redwoodPkg/Library/MemoryMapLib/MemoryMapLib.inf
+  MemoryMapLib|PocoX5ProPkg/Library/MemoryMapLib/MemoryMapLib.inf
 
   #
   # QCOM Libraries
   #
-  ConfigurationMapLib|redwoodPkg/Library/ConfigurationMapLib/ConfigurationMapLib.inf
+  ConfigurationMapLib|PocoX5ProPkg/Library/ConfigurationMapLib/ConfigurationMapLib.inf
 
 [Components]
   #

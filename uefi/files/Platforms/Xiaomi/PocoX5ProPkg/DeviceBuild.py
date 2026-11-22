@@ -24,10 +24,10 @@ from edk2toollib.utility_functions import RunCmd
 #                                Common Configuration                                     #
 # ####################################################################################### #
 class CommonPlatform ():
-    PackagesSupported = ("redwoodPkg")
+    PackagesSupported = ("PocoX5ProPkg")
     ArchSupported = ("AARCH64")
     TargetsSupported = ("DEBUG", "RELEASE")
-    Scopes = ('redwood', 'gcc_aarch64_linux', 'edk2-build')
+    Scopes = ('poco-x5-pro', 'gcc_aarch64_linux', 'edk2-build')
     WorkspaceRoot = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
     PackagesPath = (
         "Platforms/Xiaomi",
@@ -98,10 +98,10 @@ class SettingsManager (UpdateSettingsManager, SetupSettingsManager, PrEvalSettin
         return build_these_packages
 
     def GetPlatformDscAndConfig (self) -> tuple:
-        return ("redwoodPkg/redwood.dsc", {})
+        return ("PocoX5ProPkg/PocoX5Pro.dsc", {})
 
     def GetName (self):
-        return "redwood"
+        return "poco-x5-pro"
 
     def GetPackagesPath (self):
         return CommonPlatform.PackagesPath
@@ -135,7 +135,7 @@ class PlatformBuilder (UefiBuilder, BuildSettingsManager):
         return CommonPlatform.Scopes
 
     def GetName (self):
-        return "redwoodPkg"
+        return "PocoX5ProPkg"
 
     def GetLoggingLevel (self, loggerType):
         return logging.INFO
@@ -144,8 +144,8 @@ class PlatformBuilder (UefiBuilder, BuildSettingsManager):
     def SetPlatformEnv (self):
         logging.debug ("PlatformBuilder SetPlatformEnv")
 
-        self.env.SetValue ("PRODUCT_NAME", "redwood", "Platform Hardcoded")
-        self.env.SetValue ("ACTIVE_PLATFORM", "redwoodPkg/redwood.dsc", "Platform Hardcoded")
+        self.env.SetValue ("PRODUCT_NAME", "poco-x5-pro", "Platform Hardcoded")
+        self.env.SetValue ("ACTIVE_PLATFORM", "PocoX5ProPkg/PocoX5Pro.dsc", "Platform Hardcoded")
         self.env.SetValue ("TARGET_ARCH", "AARCH64", "Platform Hardcoded")
         self.env.SetValue ("TOOL_CHAIN_TAG", "CLANGPDB", "set default to clangpdb")
         self.env.SetValue ("EMPTY_DRIVE", "FALSE", "Default to false")

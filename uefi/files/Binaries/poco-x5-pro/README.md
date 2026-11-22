@@ -1,6 +1,6 @@
 ## Firmware Infos
 
-- **Device:** POCO X5 Pro 5G (redwood)
+- **Device:** POCO X5 Pro 5G
 - **Region:** Global
 - **Version:** `OS1.0.3.0.UMSMIXM` / `BOOT.MXF.1.0-00852-LAHAINA-2.12801.8`
 

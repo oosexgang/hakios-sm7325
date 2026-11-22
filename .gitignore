@@ -1,0 +1,20 @@
+# Vendor firmware, extracted device data, and generated images stay local.
+/firmware/poco-x5-pro/*
+!/firmware/poco-x5-pro/README.md
+/uefi/files/Binaries/poco-x5-pro/*
+!/uefi/files/Binaries/poco-x5-pro/README.md
+/local-firmware/
+/local-build/
+/images/
+*.ipsw
+*.im4p
+DeviceTree*.bin
+identity.bin
+*.apfs
+*.dmg
+*.dtb
+*.dtbo
+*.mbn
+*.elf
+*.bin
+__pycache__/
