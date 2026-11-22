@@ -1,4 +1,4 @@
-# HakiOS defconfig for the POCO X5 Pro 5G (SM7325, devices/sm7325-device): the common kernel's configuration, the SC7280 family's
+# HakiOS defconfig for the SM7325 device (SM7325, devices/sm7325-device): the common kernel's configuration, the SC7280 family's
 # facts and this phone's own, put together the way Android puts a device's kernel configuration together.
 # What the project's own phone line uses, with the chip's identity and the sensors read (and the run stopped at 105 degrees, the thermal driver's default) as the only additions.
 # Needs the phone's own firmware pulled from your phone (devices/sm7325-device/pull-firmware.sh): `tools/hakios-config.py needs`.

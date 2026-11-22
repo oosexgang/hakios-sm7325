@@ -1,6 +1,6 @@
-# POCO X5 Pro storage map
+# SM7325 device storage map
 
-Read-only UFS survey from the POCO X5 Pro reported a valid GPT on the 256 GB UFS unit. The phone already has a dedicated `darwin` partition at the end of storage:
+Read-only UFS survey from the SM7325 device reported a valid GPT on the 256 GB UFS unit. The phone already has a dedicated `darwin` partition at the end of storage:
 
 | Partition | LBA range | Approximate size |
 | --- | ---: | ---: |

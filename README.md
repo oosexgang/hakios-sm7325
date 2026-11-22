@@ -1,4 +1,4 @@
-# hakios-sm7325: POCO X5 Pro 5G and Snapdragon 778G (SM7325)
+# hakios-sm7325: SM7325 device and Snapdragon 778G (SM7325)
 
 One HakiOS device repository: the device (`device.conf`, `configs/`, its UEFI platform, firmware scripts) and its SoC family's
 layer (`soc/`: the SC7280 family, SM7325). `tools/hakios-device.py sync` in the common repository clones it into `devices/sm7325-device/`.
@@ -57,10 +57,9 @@ and is kept only as the worked example.
 
 ### Every soc_* argument
 
-What `tools/soc-args.py` reads from a phone's device tree, and where each comes from. The POCO
-X5 Pro's values (the kernel defaults) are shown; another phone's are generated into its `soc.args`.
+What `tools/soc-args.py` reads from a phone's device tree, and where each comes from. The SM7325 device's values (the kernel defaults) are shown; another phone's are generated into its `soc.args`.
 
-| Argument | Device-tree source | POCO value |
+| Argument | Device-tree source | SM7325 value |
 |---|---|---|
 | `soc_ipa_base` | `qcom,ipa` reg `ipa-base` + 0x40000 (the registers) | `0x1e40000` |
 | `soc_gsi_base` | `qcom,ipa` reg `gsi-base` | `0x1e04000` |

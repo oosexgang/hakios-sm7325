@@ -1,6 +1,6 @@
 #!/bin/bash
 # Pull the phone's own device tree over adb and turn it into the SoC boot-args HakiOS needs on this
-# device (tools/soc-args.py). The POCO X5 Pro matches the kernel's built-in values, so its soc.args
+# device (tools/soc-args.py). The SM7325 device matches the kernel's built-in values, so its soc.args
 # comes out empty of surprises; another phone's will carry its addresses. Needs the phone in Android
 # with adb. /sys/firmware/fdt is readable by everybody on most ROMs; where only root can read it (seen
 # on an SM7325 unit running a KernelSU build) the tree is copied under su to a staging file the shell

@@ -1,4 +1,4 @@
-# POCO X5 Pro 5G
+# SM7325 device
 
 Device support for Qualcomm SM7325 / Snapdragon 778G. The board description is in `board.dts`,
 and shared SoC register data is in `soc.dtsi`.

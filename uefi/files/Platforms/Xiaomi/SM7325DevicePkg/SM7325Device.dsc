@@ -50,10 +50,10 @@
   # SMBIOS
   #
   gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemManufacturer|"Xiaomi"
-  gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemModel|"POCO X5 Pro 5G"
-  gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemRetailModel|"POCO X5 Pro 5G"
+  gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemModel|"SM7325 device"
+  gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemRetailModel|"SM7325 device"
   gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemRetailSku|"SM7325_DEVICE"
-  gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemBoardModel|"POCO X5 Pro 5G"
+  gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemBoardModel|"SM7325 device"
 
   #
   # Simple Frame Buffer

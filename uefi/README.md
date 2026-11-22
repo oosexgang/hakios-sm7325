@@ -1,6 +1,6 @@
-# POCO X5 Pro UEFI platform
+# SM7325 device UEFI platform
 
-The POCO X5 Pro 5G's platform for HakiOS's UEFI (`uefi/` of the common repository: Mu-Silicium with HakiOS's changes and banner).
+The SM7325 device's platform for HakiOS's UEFI (`uefi/` of the common repository: Mu-Silicium with HakiOS's changes and banner).
 It is modelled on `lisa` (the same `KodiakPkg` SoC package).
 
 What is here, in `files/`:

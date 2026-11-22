@@ -15,6 +15,7 @@ cp "$MU/Resources/DTBs/redwood.dtb" files/Resources/DTBs/sm7325-device.dtb
 cp -R "$MU/Binaries/redwood/." files/Binaries/sm7325-device/
 python3 - <<'PYREWRITE'
 from pathlib import Path
+import re
 root = Path("files")
 for path in root.rglob("*"):
     if not path.is_file():
@@ -30,8 +31,8 @@ for path in root.rglob("*"):
     text = text.replace("redwood.fdf", "SM7325Device.fdf")
     text = text.replace("Build/redwoodPkg", "Build/SM7325DevicePkg")
     text = text.replace("PLATFORM_NAME                  = redwood", "PLATFORM_NAME                  = sm7325-device")
-    text = text.replace('PcdSmbiosSystemRetailModel|"redwood"', 'PcdSmbiosSystemRetailModel|"POCO X5 Pro 5G"')
-    text = text.replace('PcdSmbiosSystemRetailSku|"POCO_X5_Pro_5G_redwood"', 'PcdSmbiosSystemRetailSku|"SM7325_DEVICE"')
+    text = text.replace('PcdSmbiosSystemRetailModel|"redwood"', 'PcdSmbiosSystemRetailModel|"SM7325 device"')
+    text = re.sub(r'(PcdSmbiosSystemRetailSku\|)"[^"]*"', r'\1"SM7325_DEVICE"', text)
     text = text.replace('return "redwood"', 'return "sm7325-device"')
     path.write_text(text)
 PYREWRITE

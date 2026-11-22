@@ -1,10 +1,10 @@
 /dts-v1/;
 
-// POCO X5 Pro 5G. Sources: the phone's Android device tree (Xiaomi's SM7325 display tree, the panel
+// SM7325 device. Sources: the phone's Android device tree (Xiaomi's SM7325 display tree, the panel
 // dsi_m20_36_02_0a_dsc_vid) and what was measured on the phone under Darwin 16.5 (base/README.md).
 / {
 	name = "sm7325-device";                       // what the loader puts in /chosen/darwin-board
-	description = "POCO X5 Pro 5G";
+	description = "SM7325 device";
 	soc = "sm7325";
 
 	features = "cpufreq-epss", "ddr-rpmh", "battery-uefi", "buttons-pmic", "adsp", "touch-goodix", "speaker-aw88261", "haptic-aw86927", "torch-pm8350c", "camera-sm7325", "wifi-wcn6750", "mic-wcd938x", "gpu-a660";
@@ -210,7 +210,7 @@
 		uefi-charger;                   // the UEFI's Qualcomm charger protocols give the battery's state
 	};
 
-	// Darwin 27's default RAM boot profile for the POCO X5 Pro.
+	// Darwin 27's default RAM boot profile for the SM7325 device.
 	boot {
 		fastboot-product = "redwood";
 		cpus = <8>;                     // expose all four Cortex-A78 and four Cortex-A55 cores

@@ -1,4 +1,4 @@
-# Local POCO X5 Pro firmware
+# Local SM7325 device firmware
 
 This directory is a local staging area and is excluded from Git. The files below are extracted
 from the device/vendor packages available in this development workspace; they are not redistributed
